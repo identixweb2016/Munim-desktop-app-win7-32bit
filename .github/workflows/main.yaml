@@ -65,7 +65,7 @@ jobs:
 
       - name: "Upload exe file to bucket"
         run:  | 
-          aws s3 cp ./downloaded_asset/MunimApp.exe s3://${{ secrets.BUCKET_NAME }}/${{ secrets.BUCKET_PATH_TO_UPLOAD_EXE }}/win7/MunimApp.exe --endpoint ${{ secrets.BUCKET_ENDPOINT }} --acl public-read
+          aws s3 cp ./downloaded_asset/MunimApp.exe s3://${{ secrets.BUCKET_NAME }}/${{ secrets.BUCKET_PATH_TO_UPLOAD_EXE }}/win7_32/MunimApp.exe --endpoint ${{ secrets.BUCKET_ENDPOINT }} --acl public-read
           echo "EXE file uploaded to bucket."
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.BUCKET_ACCESS_KEY }}
