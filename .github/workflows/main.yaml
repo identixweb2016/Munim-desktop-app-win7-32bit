@@ -3,7 +3,7 @@ name: Sign EXE and Create Signed Release
 on:
   push:
     tags:
-      - 'stopv*'
+      - 'v*'
 
 jobs:
   sign_exe:
